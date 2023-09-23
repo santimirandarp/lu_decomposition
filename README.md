@@ -1,10 +1,9 @@
 Simple, limited, incomplete and probably wrong LU decomposition.
 
-1. Clone the project
-2. Install `npm i`
-3. Run `npm start` to see the result with a random matrix.
+1. `gh repo clone https://github.com/santimirandarp/lu_decomposition && cd lu_decomposition`
+2.   Install `npm i && npm start`
 
-What does the code do?
+**What does the code do?**
 
 1. It creates a random matrix of size 1000x1000
 2. It calculates the LU decomposition of the matrix with 2 different methods ml-matrix LU and the one implemented in this project, which is not robust yet.
