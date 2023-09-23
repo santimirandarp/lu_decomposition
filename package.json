@@ -1,0 +1,46 @@
+{
+  "name": "lu_decomposition",
+  "version": "0.0.0",
+  "description": "fast lu decomposition",
+  "main": "./lib/index.js",
+  "module": "./lib-esm/index.js",
+  "types": "./lib/index.d.ts",
+  "keywords": [],
+  "author": "Santi Miranda",
+  "license": "MIT",
+  "files": [
+    "src",
+    "lib",
+    "lib-esm"
+  ],
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf lib lib-esm",
+    "eslint": "eslint src --cache",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepack": "npm run tsc",
+    "prettier": "prettier --check src",
+    "prettier-write": "prettier --write src",
+    "test": "npm run test-only && npm run eslint && npm run prettier && npm run check-types",
+    "test-only": "jest --coverage",
+    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm",
+    "tsc-cjs": "tsc --project tsconfig.cjs.json",
+    "tsc-esm": "tsc --project tsconfig.esm.json",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santimirandarp/lu_decomposition.git"
+  },
+  "bugs": {
+    "url": "https://github.com/santimirandarp/lu_decomposition/issues"
+  },
+  "homepage": "https://github.com/santimirandarp/lu_decomposition#readme",
+  "dependencies": {
+    "i": "^0.3.7",
+    "ml-matrix": "^6.10.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
